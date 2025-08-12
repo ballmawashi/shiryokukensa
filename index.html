@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>沖縄MICEアトラクションズ</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      background-color: #000;
+      color: #fff;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: rgba(0,0,0,0.7);
+      position: fixed;
+      width: 100%;
+      z-index: 10;
+    }
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .lang-buttons button {
+      margin-left: 5px;
+      padding: 5px 10px;
+      background-color: #444;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .hero {
+      height: 100vh;
+      background-image: url('https://example.com/okinawa-image.jpg');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 20px;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      background: rgba(0,0,0,0.5);
+      padding: 10px 20px;
+      border-radius: 10px;
+    }
+    @media (min-width: 768px) {
+      .hero h1 {
+        font-size: 3.5rem;
+      }
+    }
+    section {
+      padding: 80px 20px;
+    }
+    h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 40px;
+    }
+    /* 共通カードスタイル */
+    .card {
+      flex: 1 1 300px;
+      max-width: 400px;
+      background-color: #222;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .card img {
+      width: 100%;
+      height: auto;
+    }
+    .card div {
+      padding: 20px;
+    }
+    /* フォーム */
+    form {
+      max-width: 600px;
+      margin: auto;
+      background-color: #222;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(255,255,255,0.1);
+    }
+    form input, form select, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0 20px;
+      border-radius: 5px;
+      border: none;
+    }
+    form button {
+      width: 100%;
+      padding: 15px;
+      background: linear-gradient(45deg, gold, darkorange);
+      color: black;
+      font-weight: bold;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    form button:hover {
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ヘッダー -->
+<header>
+  <div class="logo">沖縄MICEアトラクションズ</div>
+  <nav>
+    <a href="#services">サービス紹介</a>
+    <a href="#works">実績紹介</a>
+    <a href="#contact">お問い合わせ</a>
+    <a href="#company">会社概要</a>
+  </nav>
+  <div class="lang-buttons">
+    <button onclick="changeLang('ja')">日本語</button>
+    <button onclick="changeLang('en')">English</button>
+    <button onclick="changeLang('zh')">中文</button>
+  </div>
+</header>
+
+<!-- トップページ -->
+<section class="hero">
+  <h1 id="catchcopy">沖縄でしか体験できない、特別な夜を。</h1>
+</section>
+
+<!-- サービス紹介 -->
+<section id="services" style="background-color: #111;">
+  <h2>サービス紹介</h2>
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+    <div class="card">
+      <img src="https://example.com/fire-show.jpg" alt="ファイヤーショー">
+      <div>
+        <h3>ファイヤー＆ライトショー</h3>
+        <p>炎と光が織りなす圧倒的な演出。沖縄の夜を彩ります。</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://example.com/aerial-performance.jpg" alt="エアリアルパフォーマンス">
+      <div>
+        <h3>エアリアルアクロバット</h3>
+        <p>宙を舞うアクロバットと美しい照明演出。特別な体験をお届け。</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://example.com/live-band.jpg" alt="ライブバンド">
+      <div>
+        <h3>プレミアムライブ</h3>
+        <p>世界レベルのミュージシャンによる特別ステージ。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 実績紹介 -->
+<section id="works" style="background-color: #000;">
+  <h2>実績・事例紹介</h2>
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+    <div class="card" style="max-width: 500px; background-color: #111;">
+      <img src="https://example.com/mice-event.jpg" alt="国際会議向けファイヤーショー">
+      <div>
+        <h3>国際会議向けファイヤーショー</h3>
+        <p>海外VIPを迎えるガラディナーでの演出。迫力の炎と音楽で魅了。</p>
+      </div>
+    </div>
+    <div class="card" style="max-width: 500px; background-color: #111;">
+      <img src="https://example.com/resort-performance.jpg" alt="リゾートホテルでのプレミアムライブ">
+      <div>
+        <h3>リゾートホテルでのプレミアムライブ</h3>
+        <p>南国の夜空の下、世界的アーティストによる特別ステージ。</p>
+      </div>
+    </div>
+    <div class="card" style="max-width: 500px; background-color: #111;">
+      <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+        <iframe src="https://www.youtube.com/embed/動画ID" frameborder="0" allowfullscreen
+          style="position: absolute; top:0; left:0; width:100%; height:100%;"></iframe>
+      </div>
+      <div>
+        <h3>大型イベントでのエアリアル演出</h3>
+        <p>国際展示会のオープニングを飾った空中パフォーマンス。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 予約フォーム -->
+<section id="contact" style="background-color: #111;">
+  <h2>お問い合わせ・予約</h2>
+  <form action="send.php" method="post">
+    <label for="name">お名前 / Name</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">メールアドレス / Email</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="date">ご希望日 / Preferred Date</label>
+    <input type="date" id="date" name="date" required>
+
+    <label for="service">ご希望サービス / Service</label>
+    <select id="service" name="service">
+      <option value="fire_show">ファイヤー＆ライトショー</option>
+      <option value="aerial_acrobat">エアリアルアクロバット</option>
+      <option value="premium_live">プレミアムライブ</option>
+    </select>
+
+    <label for="message">ご要望・メッセージ / Message</label>
+    <textarea id="message" name="message" rows="5"></textarea>
+
+    <button type="submit">予約する / Book Now</button>
+  </form>
+</section>
+
+<!-- 会社概要 -->
+<section id="company" style="background-color: #000;">
+  <h2>会社概要</h2>
+  <div style="max-width: 600px; margin: auto; line-height: 1.8;">
+    <p><strong>会社名：</strong> 沖縄MICEアトラクションズ株式会社</p>
+    <p><strong>所在地：</strong> 沖縄県那覇市〇〇町1-2-3</p>
+    <p><strong>代表者：</strong> 山田 太郎</p>
+    <p><strong>設立：</strong> 2025年1月</p>
+    <p><strong>事業内容：</strong> MICE・インバウンド向けアトラクション企画・運営</p>
+    <p><strong>連絡先：</strong> info@example.com</p>
+  </div>
+</section>
+
+<!-- 多言語切替スクリプト -->
+<script>
+  const translations = {
+    ja: { catchcopy: "沖縄でしか体験できない、特別な夜を。" },
+    en: { catchcopy: "An unforgettable night, only in Okinawa." },
+    zh: { catchcopy: "只有在沖繩才能體驗的特別之夜。" }
+  };
+  function changeLang(lang) {
+    document.getElementById("catchcopy").textContent = translations[lang].catchcopy;
+  }
+</script>
+
+</body>
+</html>
